@@ -47,7 +47,7 @@ function xnxxdl(URL) {
 
 function xnxxsearch(query) {
 	return new Promise((resolve, reject) => {
-		const baseurl = 'https://www.pemersatufun.com'
+		const baseurl = 'https://www.brobokep.org'
 		fetch(`${baseurl}/search/${query}/${Math.floor(Math.random() * 3) + 1}`, {method: 'get'})
 		.then(ress => ress.text())
 		.then(ress1 => {
