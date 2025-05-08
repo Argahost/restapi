@@ -29,7 +29,7 @@ function convertCRC16(str) {
 }
 
 function generateTransactionId() {
-    return `LUXZ-OFFC-${crypto.randomBytes(2).toString('hex').toUpperCase()}`
+    return `PentaHostinger-${crypto.randomBytes(2).toString('hex').toUpperCase()}`
 }
 
 function generateExpirationTime() {
@@ -53,7 +53,7 @@ let { directLink } = await service.uploadFromBinary(buffer, 'luxz.png');
 
 async function generateQRIS(amount) {
     try {
-        let qrisData = "code qris lu";
+        let qrisData = "00020101021126670016COM.NOBUBANK.WWW01189360050300000879140214607543513565140303UMI51440014ID.CO.QRIS.WWW0215ID20222196972340303UMI5204481253033605802ID5911ARGA STOREE6005MAROS61059051162070703A0163040A4A";
 
         qrisData = qrisData.slice(0, -4);
         const step1 = qrisData.replace("010211", "010212");
@@ -115,7 +115,7 @@ async function createQRIS(amount, codeqr) {
 
 async function checkQRISStatus() {
     try {
-        const apiUrl = `https://gateway.okeconnect.com/api/mutasi/qris/isi pakai merchant orkut/apikey orkut`;
+        const apiUrl = `https://gateway.okeconnect.com/api/mutasi/qris/OK804946/43570281745285675804946OKCT316E56468A4E8A0D874792912864FDF1`;
         const response = await axios.get(apiUrl);
         const result = response.data;
         const data = result.data;
